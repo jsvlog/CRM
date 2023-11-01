@@ -8,8 +8,8 @@
 {% if user.is_authenticated %}
 <h1> Hello World</h1>
 
-<table class="table table-hover table-borders">
-  <thead class="table-dark">
+<table id="custo" class="table table-striped" style="width:100%">
+  <thead>
     <tr>
       <th scope="col">Name</th>
       <th scope="col">Email</th>
@@ -23,7 +23,7 @@
     </tr>
   </thead>
   <tbody>
-    <tr>
+    
     {% if records %}
       {% for record in records %}
           <tr>
@@ -40,7 +40,7 @@
           </tr>
       {% endfor %}
     {% endif %}
-    </tr>
+    
   </tbody>
 </table>
 

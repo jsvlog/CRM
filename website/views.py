@@ -93,3 +93,8 @@ def update_record(request, pk):
         else:
             messages.success(request, 'You must be log in to delete record')
             return redirect('home')
+        
+
+def bootstrap5(request):
+    records = Record.objects.all()
+    return render(request, 'bootstrap5.html', {'records':records})
